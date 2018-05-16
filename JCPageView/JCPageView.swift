@@ -59,6 +59,19 @@ extension JCPageView {
                                 width: text.getWidth(font, 100), height: lineHeight)
         lastIndex = index
     }
+    
+    /// 设置pageView
+    ///
+    /// - Parameters:
+    ///   - pageView: pageView
+    ///   - index: 下标
+    public func set(_ pageView: UIView, index: Int) {
+        if index > pageViewArr.count {
+            print("pageViewIndex越界")
+        } else {
+            pageViewArr[index].addSubview(pageView)
+        }
+    }
 }
 
 /// 分页视图
